@@ -16,9 +16,11 @@ class ComposeViewController: UIViewController {
     {
         if storyTextView.text != "" {
             
-            // TODO: (1) Create new story
+            // create new story
+            let newStory = Story(text: storyTextView.text)
             
-            //       (2) Upload the story to Firebase
+            // store the story into firebase
+            newStory.save()
             
             self.navigationController!.popViewController(animated: true)
         }
