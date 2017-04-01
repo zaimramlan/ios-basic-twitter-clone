@@ -1,2 +1,5 @@
 # Mac Finder Artifacts
 .DS_Store
+
+# Firebase plist file
+GoogleService-Info.plist
