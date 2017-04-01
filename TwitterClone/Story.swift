@@ -9,5 +9,9 @@
 import Foundation
 
 class Story {
+    var text             = ""
+    var numberOfLikes    = 0
+    var numberOfDislikes = 0
+    
     
 }
