@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  TwitterClone
 //
-//  Created by zieras on 01/04/2017.
+//  Created by Zaim Ramlan on 01/04/2017.
 //  Copyright © 2017 zaimramlan. All rights reserved.
 //
 
