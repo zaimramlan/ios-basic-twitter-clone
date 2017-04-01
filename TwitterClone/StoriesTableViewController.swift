@@ -7,18 +7,35 @@
 //
 
 import UIKit
+import Firebase
 
 class StoriesTableViewController: UITableViewController {
     // MARK: - Properties
+    var stories = [Story]()
+    
+    // set firebase reference
+    private let storiesRef = FIRDatabase.database().reference().child("stories")
     
     @IBOutlet weak var composeBarButtonItem: UIBarButtonItem!
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        // TODO: download our new stories here
-        // (1) download data from the reference every time it gets called
-        // (2) automatically download data from the reference every time
+        // bind onto firebase database
+        storiesRef.observe(.value, with: { snapshot in
+            // remove existing stories
+            self.stories.removeAll()
+            
+            // access child object
+            for child in snapshot.children {
+                // initialise the child object into a story
+                let story = Story(snapshot: child as! FIRDataSnapshot)
+                self.stories.append(story)
+            }
+            
+            // reload the tableView to display latest data from firebase
+            self.tableView.reloadData()
+        })
     }
     
     override func viewDidLoad() {
@@ -44,14 +61,14 @@ class StoriesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // TODO: return the stories count
-        return 0
+        return stories.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Story Cell", for: indexPath) as! StoryTableViewCell
+        let cell   = tableView.dequeueReusableCell(withIdentifier: "Story Cell", for: indexPath) as! StoryTableViewCell
         
-        // TODO: assign a story for the cell
+        // assign the cell with the story at the particular index
+        cell.story = self.stories[indexPath.row]
         
         return cell
     }
