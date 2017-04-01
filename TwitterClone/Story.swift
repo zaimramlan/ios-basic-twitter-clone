@@ -53,3 +53,23 @@ class Story {
         ]
     }
 }
+
+// extend story's functionality
+extension Story {
+    
+    // function when is liked
+    func like() {
+        numberOfLikes += 1
+        
+        // update the value in firebase
+        ref.child("number_of_likes").setValue(numberOfLikes)
+    }
+    
+    // function when is disliked
+    func dislike() {
+        numberOfDislikes += 1
+        
+        // update the value in firebase
+        ref.child("number_of_dislikes").setValue(numberOfDislikes)
+    }
+}

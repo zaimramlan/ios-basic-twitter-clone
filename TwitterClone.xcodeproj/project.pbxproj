@@ -18,7 +18,6 @@
 		A4E45C5D1E8F592300E1F103 /* StoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E45C5C1E8F592300E1F103 /* StoryTableViewCell.swift */; };
 		A4E45C5F1E8F5A5600E1F103 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4E45C5E1E8F5A5600E1F103 /* Main.storyboard */; };
 		A4E45C611E8F5BC600E1F103 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4E45C601E8F5BC600E1F103 /* GoogleService-Info.plist */; };
-		A4E45C641E8F5E9500E1F103 /* Dummy.json in Resources */ = {isa = PBXBuildFile; fileRef = A4E45C631E8F5E9500E1F103 /* Dummy.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +35,6 @@
 		A4E45C5E1E8F5A5600E1F103 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A4E45C601E8F5BC600E1F103 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A4E45C621E8F5C8400E1F103 /* TwitterClone.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TwitterClone.entitlements; sourceTree = "<group>"; };
-		A4E45C631E8F5E9500E1F103 /* Dummy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Dummy.json; sourceTree = "<group>"; };
 		C5D16CE21D47766E85C110C8 /* Pods-TwitterClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterClone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TwitterClone/Pods-TwitterClone.debug.xcconfig"; sourceTree = "<group>"; };
 		FFF36EACFAEFA84994B844D8 /* Pods-TwitterClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterClone.release.xcconfig"; path = "Pods/Target Support Files/Pods-TwitterClone/Pods-TwitterClone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,7 +98,6 @@
 			isa = PBXGroup;
 			children = (
 				A4E45C541E8F54D400E1F103 /* Story.swift */,
-				A4E45C631E8F5E9500E1F103 /* Dummy.json */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -200,7 +197,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4E45C641E8F5E9500E1F103 /* Dummy.json in Resources */,
 				A4E45C4A1E8F51C300E1F103 /* LaunchScreen.storyboard in Resources */,
 				A4E45C611E8F5BC600E1F103 /* GoogleService-Info.plist in Resources */,
 				A4E45C471E8F51C300E1F103 /* Assets.xcassets in Resources */,
